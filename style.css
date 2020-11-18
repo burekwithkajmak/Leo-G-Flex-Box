@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Här ändrar jag olika element när widthen blir mindre än 600px på skärmen, alltså exempelvis mobil. */
+@media all and (max-width: 600px) {
+    /* Här gör jag exempelvis navbaren mer mobil anpassad. */
+    .wrapper-nav ul {
+        flex-direction: column;
+    }
+
+    .wrapper-nav ul li {
+        text-align: center;
+    }
+
+    .footer-text {
+        font-size: 0.55em;
+    }
+
+    .item-desc {
+        font-size: 0.7em;
+    }
+
+    .item-price {
+        font-size: 0.6em;
+    }
+
+    .buy-button {
+        font-size: 0.5em;
+    }
+    
+    .notification {
+        font-size: 0.5em;
+        width: 150px;
+    }
+
+    .wrapper-products {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        margin-bottom: 18%;
+    }
+
+    .wrapper-nav {
+        font-size: 0.8em;
+    }
+
+}
+
+/* Här sätter jag display flex men också flex-direction för att den ska veta hur den ska displaya allt på skärmen, med kolummer. */
+body {
+    background-image: url(https://playgroundinc.com/static/canada-goos-case-study-hero-fbbbd09231052ffb3fa0a8daabcb6c9d.jpg);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.wrapper-nav {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Här sätter jag display flex på nav baren men också gör så att den använder space mellan varandra. */
+.wrapper-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper-nav ul li {
+    cursor: pointer;
+    padding: 0.5rem;
+    flex: auto;
+    text-align: center;
+}
+
+.nav-text {
+    text-decoration: none;
+    color: rgb(39, 39, 117);
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-left: 2px solid rgb(39, 39, 117);
+    border-right: 2px solid rgb(39, 39, 117);
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bold;
+}
+
+.nav-text:hover {
+    color:  rgb(155, 32, 32);
+    border-left: 2px solid rgb(155, 32, 32);
+    border-right: 2px solid  rgb(155, 32, 32);
+}
+
+
+/* Här sätter jag display flex och sedan centrerar elementet på skärmen med hjälp av justify-content: center; och align-self: center; */
+.header-text {
+    margin-top: 3%;
+    display: flex;
+    font-size: 1.4em;
+    color: white;
+    text-transform: uppercase;
+    justify-content: center;
+    align-self: center;
+    text-shadow: 2px 2px 3px #666666;
+    color: rgb(39, 39, 117);
+    font-weight: bold;
+}
+
+
+/* Här sätter jag display flex på .wrapper-products men också centrar alla items mitt på skärmen och sedan sänker itemsen med margin-top */
+.wrapper-products {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    width: 400px;
+    max-height: 600px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.item-img {
+    margin-top: 10%;
+    max-width: 70%;
+}
+
+.item-desc {
+    text-decoration: underline;
+    margin-top: 5%;
+    color: rgb(39, 39, 117);
+}
+
+.item-price {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: rgb(39, 39, 117);
+}
+
+.cart-img {
+    width: 5%;
+    height: auto;
+}
+
+/* Här sätter jag display flex och sedan använder all space som finns på footern och även centrerar elementen. */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-text {
+    color: rgb(39, 39, 117);
+    text-transform: uppercase;
+}
+
+.buy-button {
+    margin-bottom: 4%;
+    background-color: white;
+    border: 1px solid rgb(39, 39, 117);
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: rgb(39, 39, 117);
+    padding: 5px;
+    transition: 0.5s;
+    outline: none;
+}
+
+.buy-button:hover {
+    background-color: rgb(39, 39, 117);
+    color: white;
+}
+
+.notification {
+    display: none;
+    background-color: rgb(39, 39, 117);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.wrapper-notification {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#count {
+    color:  rgb(39, 39, 117);
+}
+
+
+/* Här sätter jag display flex och centrerar alla items med hjälp av det. */
+.wrapper-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box {
+    margin-top: 15%;
+    height: 300px;
+    width: 500px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/* Här sätter jag display flex och centrerar alla items med hjälp av det. */
+.contact-info {
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-logo {
+    width: 15%;
+    height: auto;
+    margin-left: 42.5%;
+    margin-top: 6%;
+}
+
