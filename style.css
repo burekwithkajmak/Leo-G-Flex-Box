@@ -46,7 +46,7 @@
         font-size: 0.5em;
         width: 150px;
     }
-
+    /* Här sätter jag flex-wrap på containern som håller alla items för att det ska vara med mobilt anpassat och att itemsen stackas på varandra. */
     .wrapper-products {
         flex-wrap: wrap;
     }
